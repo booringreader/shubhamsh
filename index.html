@@ -13,11 +13,11 @@
             background-color: #0c0a09;
             color: #f8fafc;
             overflow-x: hidden;
-            cursor: none; /* Hide default cursor */
+            cursor: default;
         }
         
         a, button, [role="button"] {
-            cursor: none !important;
+            cursor: pointer; 
         }
 
         .font-dbz { font-family: 'Luckiest Guy', cursive; }
@@ -93,41 +93,46 @@
           transform: translateX(0);
         }
 
-        /* Custom Cursor Style */
-        #custom-cursor {
+       #custom-cursor-trail {
           position: fixed;
           top: 0;
           left: 0;
-          width: 24px;
-          height: 24px;
-          border: 2px solid #06b6d4;
+          width: 40px;
+          height: 40px;
+          border: 1px solid rgba(6, 182, 212, 0.5);
           border-radius: 50%;
           pointer-events: none;
           z-index: 9999;
           transform: translate(-50%, -50%);
-          transition: width 0.3s, height 0.3s, border-color 0.3s, background-color 0.3s;
+          /* The transition on transform creates the "trailing" effect */
+          transition: 
+            width 0.3s ease-out, 
+            height 0.3s ease-out, 
+            border-color 0.3s ease-out, 
+            background-color 0.3s ease-out,
+            transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
           display: flex;
           align-items: center;
           justify-content: center;
-        }
-        #custom-cursor::after {
+          mix-blend-mode: screen;
+        } 
+        * Inner glow core of the trail */
+        #custom-cursor-trail::before {
           content: '';
-          width: 4px;
-          height: 4px;
-          background-color: #06b6d4;
+          width: 60%;
+          height: 60%;
           border-radius: 50%;
-          transition: transform 0.3s;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          animation: ki-pulse 2s infinite;
         }
+
         .cursor-hover {
-          width: 50px !important;
-          height: 50px !important;
-          background-color: rgba(234, 88, 12, 0.1);
-          border-color: #ea580c !important;
-          border-width: 1px !important;
-        }
-        .cursor-hover::after {
-          transform: scale(2);
-          background-color: #ea580c !important;
+          width: 80px !important;
+          height: 80px !important;
+          background-color: rgba(234, 88, 12, 0.05);
+          border-color: rgba(234, 88, 12, 0.8) !important;
+          border-width: 2px !important;
+          box-shadow: 0 0 20px rgba(234, 88, 12, 0.3);
         }
     </style>
 <script type="importmap">

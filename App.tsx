@@ -29,7 +29,7 @@ const useIntersectionObserver = (options = {}) => {
 
 const App: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [cursorPos, setCursorPos] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
   const [setRevealElements, revealEntries] = useIntersectionObserver({
     threshold: 0.1,
@@ -46,7 +46,7 @@ const App: React.FC = () => {
       setCursorPos({ x: e.clientX, y: e.clientY });
 
       const target = e.target as HTMLElement;
-      const isOverInteractive = !!target.closest('a, button, [role="button"], .group');
+      const isOverInteractive = !!target.closest('a, button, [role="button"], .group, .wanted-border');
       setIsHovering(isOverInteractive);
     };
 
@@ -129,11 +129,11 @@ const App: React.FC = () => {
 
       {/* Custom Cursor */}
       <div
-        id="custom-cursor"
+        id="custom-cursor-trail"
         className={isHovering ? 'cursor-hover' : ''}
         style={{
           transform: `translate3d(${cursorPos.x}px, ${cursorPos.y}px, 0) translate(-50%, -50%)`,
-          borderColor: scrollProgress > 80 ? '#dc2626' : (scrollProgress > 40 ? '#facc15' : '#06b6d4')
+          borderColor: scrollProgress > 80 ? '#rgba(220, 38, 38, 0.5)' : (scrollProgress > 40 ? '#rgba(250, 204, 21, 0.5)' : '#rgba(6, 182, 212, 0.5)')
         }}
       ></div>
 
