@@ -161,7 +161,7 @@ const App: React.FC = () => {
         {/* Left Hand: Hand of Man (Adam) - Reaching Out */}
         <div className="absolute left-0 top-[40%] -translate-y-1/2 w-[80%] max-w-[1000px] z-20 pointer-events-none transform -translate-x-[20%] hand-anim">
           <img
-            src="assets/man.png"
+            src="./assets/man.png"
             alt="Hand of Adam (Man)"
             style={{ filter: 'grayscale(100%) contrast(180%) brightness(90%) sepia(10%)' }}
             className="w-full h-auto object-contain rotate-[-15deg] opacity-80 drop-shadow-[0_0_20px_rgba(255,255,255,0.05)]"
@@ -191,7 +191,7 @@ const App: React.FC = () => {
         {/* Right Hand: Hand of God - Pointing Back (Touched Up cracked version) */}
         <div className="absolute right-0 top-[14%] -translate-y-1/2 w-[70%] max-w-[1000px] z-20 pointer-events-none transform translate-x-[20%] hand-anim" style={{ animationDelay: '-3s' }}>
           <img
-            src="assets/god.png"
+            src="./assets/god.png"
             alt="Hand of God"
             style={{
               filter: 'grayscale(100%) contrast(200%) brightness(140%) sepia(15%) drop-shadow(0 0 15px rgba(234, 179, 8, 0.3))'
