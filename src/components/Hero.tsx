@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Github, Linkedin} from 'vite-plugin-favicons-inject';
 import { Page } from '../types';
 
 interface HeroProps {
