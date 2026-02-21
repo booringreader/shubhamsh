@@ -73,18 +73,6 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      Custom Cursor or other global elements could go here
-      {currentPage !== 'home' && (
-        <footer className="bg-brand-bg py-12 px-6 md:px-24 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-brand-text-muted text-xs font-mono tracking-widest uppercase">
-          </div>
-          <div className="flex gap-8">
-            <a href="#" className="text-brand-text-muted hover:text-brand-accent text-xs font-mono uppercase tracking-widest transition-colors">Github</a>
-            <a href="#" className="text-brand-text-muted hover:text-brand-accent text-xs font-mono uppercase tracking-widest transition-colors">LinkedIn</a>
-            <a href="#" className="text-brand-text-muted hover:text-brand-accent text-xs font-mono uppercase tracking-widest transition-colors">Twitter</a>
-          </div>
-        </footer>
-      )}
     </div>
   );
 }
