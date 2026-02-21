@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Satoshi", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-satoshi: "Satoshi", sans-serif;
+
+  --color-brand-bg: var(--bg);
+  --color-brand-paper: var(--paper);
+  --color-brand-accent: var(--accent);
+  --color-brand-accent-secondary: var(--accent-secondary);
+  --color-brand-muted: var(--muted);
+  --color-brand-text: var(--text);
+  --color-brand-text-muted: var(--text-muted);
+  --color-brand-fixed-blue: #2563EB;
+}
+
+:root {
+  --bg: #111111;
+  --paper: #1A1A1A;
+  --muted: #222222;
+  --text: #FFFFFF;
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --accent: #2563EB;
+  --accent-secondary: #4B5563;
+}
+
+:root.light {
+  --bg: #FFFFFF;
+  --paper: #F9FAFB;
+  --muted: #F3F4F6;
+  --text: #111111;
+  --text-muted: rgba(17, 17, 17, 0.5);
+  --accent: #2563EB;
+  --accent-secondary: #9CA3AF;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-sans antialiased selection:bg-brand-accent selection:text-white transition-colors duration-300 cursor-none;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+a, button {
+  @apply cursor-none;
+}
+
+.split-pane-left {
+  @apply bg-brand-bg text-brand-text;
+}
+
+.split-pane-right {
+  @apply bg-brand-fixed-blue text-white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-brand-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-muted rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand-accent;
+}
