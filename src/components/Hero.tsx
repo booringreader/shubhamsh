@@ -18,20 +18,18 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="z-10"
         >
-          <span className="text-brand-accent font-mono text-3xl tracking-widest -mb-2 block">
-            Hi, I am
+          <span className="text-brand-accent font-mono text-xl tracking-widest mb-2 block">
+            HI, MY NAME IS
           </span>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-none tracking-tighter mb-4">
-            Shubham { /* <br /> */}
-            {/* <span className="outline-text">SHARMA</span> */}
+            SHUBHAM <br/>
+            <span className="outline-text">SHARMA</span>
           </h1>
           <p className="max-w-md text-brand-text-muted text-base md:text-lg leading-tight mb-4 font-satoshi">
-          I build full-stack applications that blend performance, scalability, and thoughtful design. </p>
-          <p className="max-w-md text-brand-text-muted text-base md:text-lg leading-tight mb-4 font-satoshi">
+          I build full-stack applications that blend performance, scalability, and thoughtful design. <br />
           At the system level, I engineer low-level software with a focus on efficiency and control.</p>
-          <p className="max-w-md text-brand-text-muted text-base md:text-lg leading-tight mb-4 font-satoshi">
-          When not doing either, I like to touch some grass, do LeetCode and read fiction.</p>
           <p className="max-w-md text-brand-text-muted text-base md:text-lg leading-tight mb-10 font-satoshi">
+          When not doing either, I like to touch some grass, do LeetCode and read fiction. <br />
           Explore my{" "}
             
             <button onClick={() => onNavigate('projects')} className="text-brand-accent hover:text-brand-text underline underline-offset-4 transition-colors font-medium"> projects </button> {" "}
@@ -43,8 +41,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
           <div className="flex flex-col gap-5">
             <div className="flex gap-4 items-center">
-              <a href="mailto:shubhamsha.rma@outlook.com" className="text-brand-text-muted hover:text-brand-text transition-colors"><i class="fa-regular fa-envelope text-2xl"></i></a>
-              <a href="https://linkedin.com/in/shubhams1-" className="text-brand-text-muted hover:text-brand-text transition-colors"><i class="fa-brands fa-linkedin-in text-2xl"></i></a>
+              <a href="mailto:shubhamsha.rma@outlook.com" className="text-brand-text-muted hover:text-brand-text transition-colors"><i class="fa-regular fa-envelope text-2xl w-7"></i></a>
+              <a href="https://linkedin.com/in/shubhams1-" className="text-brand-text-muted hover:text-brand-text transition-colors"><i class="fa-brands fa-linkedin-in text-2xl w-7"></i></a>
               <a href="https://github.com/booringreader" className="text-brand-text-muted hover:text-brand-text transition-colors"><i class="fa-brands fa-github text-2xl font-light"> </i></a>
             </div>
           </div>
