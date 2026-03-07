@@ -4,41 +4,49 @@ export const PROJECTS: Project[] = [
   {
     id: '1',
     title: 'Cortex-M4 Firmware',
-    description: 'A custom lightweight operating system kernel written in Rust, focusing on memory safety and high-concurrency performance.',
-    tags: ['Rust', 'ASM', 'Systems'],
-    githubUrl: '#',
+    description: 'Embedded systems project implementing firmware for STM32 Cortex-M4 microcontrollers. This is a low-level hardware-focused project designed to run on ARM-based embedded devices',
+    tags: ['C', 'STM32', 'ARM Cortex-M4'],
+    githubUrl: 'https://github.com/booringreader/firmware.git',
     liveUrl: '#'
   },
   {
     id: '2',
     title: 'LogViewer',
-    description: 'Real-time object detection and spatial mapping system using computer vision for autonomous drone navigation.',
-    tags: ['Python', 'PyTorch', 'C++'],
-    githubUrl: '#',
+    description: 'Utility for reading and displaying N lines from a log file, with automatic log generation capabilities (autolog). This is a lightweight tool designed for quick log file inspection and analysis.',
+    tags: ['JavaScript'],
+    githubUrl: 'https://github.com/booringreader/logreader.git',
     liveUrl: '#'
   },
   {
     id: '3',
     title: 'Database engine',
-    description: 'Decentralized identity management system built on Ethereum, enabling secure and private cross-chain authentication.',
-    tags: ['Go', 'Mutex', 'JSON'],
-    githubUrl: '#',
+    description: 'Lightweight file-based database engine written in Go. It implements a simple document database that stores data as JSON files organized in a directory structure.',
+    tags: ['Go', 'Mutex', 'JSON', 'Concurrency'],
+    githubUrl: 'https://github.com/booringreader/dbengine.git',
     liveUrl: '#'
   },
   {
     id: '4',
     title: 'CovidD',
-    description: 'A high-performance 2D physics engine optimized for web-based interactive simulations and gaming.',
-    tags: ['TypeScript', 'Canvas', 'Math'],
-    githubUrl: '#',
+    description: 'Python-based project related to COVID-19 data analysis or disease modeling. While the specific focus isn\'t detailed in the description, the name suggests work with COVID-19 datasets, epidemiological analysis, or data-driven insights related to the pandemic.',
+    tags: ['Python', 'Data Visualization'],
+    githubUrl: 'https://github.com/booringreader/covidD.git',
     liveUrl: '#'
   },
   {
     id: '5',
     title: 'bosh',
-    description: 'A high-performance 2D physics engine optimized for web-based interactive simulations and gaming.',
+    description: 'POSIX-compliant shell implementation written from scratch in C. It provides a complete Unix command interpreter with full lexical analysis and execution capabilities, including scanning, tokenization, parsing, and command execution. This is a systems programming project that recreates core shell functionality.',
     tags: ['C'],
     githubUrl: '#',
+    liveUrl: '#'
+  },
+  {
+    id: '6',
+    title: 'statsDecay',
+    description: 'Implements a Markov chain algorithm to determine whether a given input fuel quantity is sufficient to create a nuclear bomb. It\'s a specialized computational project focused on probabilistic modeling and statistical calculations.',
+    tags: ['C++', 'Markov Chain'],
+    githubUrl: 'https://github.com/booringreader/statsDecay.git',
     liveUrl: '#'
   }
 ];

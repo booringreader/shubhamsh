@@ -27,28 +27,30 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate }) => {
         className="mb-16"
       >
         <h2 className="text-5xl md:text-7xl font-display font-bold mb-4">Selected Works</h2>
-        <div className="h-1 w-24 bg-brand-accent"></div>
+        <div className="h-1 w-39 bg-brand-accent"></div>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         {PROJECTS.map((project, index) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="group relative bg-brand-paper p-8 md:p-12 rounded-2xl border border-brand-text/5 hover:border-brand-accent/30 transition-all duration-500"
+            className="group relative bg-brand-paper p-8 md:px-12 rounded-2xl border border-brand-text/5 hover:border-brand-accent/30 transition-all duration-500"
           >
-            <div className="flex justify-between items-start mb-8">
-              <div className="flex gap-2">
+            <div className="flex justify-between items-start mb-3">
+              <div className="flex flex-wrap gap-2">
                 {project.tags.map(tag => (
-                  <span key={tag} className="text-[10px] font-mono uppercase tracking-widest text-brand-accent-secondary bg-brand-accent-secondary/10 px-2 py-1 rounded">
+                  <span
+                    key={tag}
+                    className="text-[10px] font-mono uppercase tracking-widest text-brand-accent-secondary bg-brand-accent-secondary/10 px-2 py-1 rounded">
                     {tag}
                   </span>
                 ))}
               </div>
               <div className="flex gap-4">
-                <a href={project.githubUrl} className="text-brand-text-muted hover:text-brand-text transition-colors">
+                <a href={project.githubUrl} className="text-brand-text-muted hover:text-brand-text transition-colors pl-2">
                   <Github size={20} />
                 </a>
                 <a href={project.liveUrl} className="text-brand-text-muted hover:text-brand-text transition-colors">
@@ -60,7 +62,7 @@ export const ProjectGrid: React.FC<ProjectGridProps> = ({ onNavigate }) => {
             <h3 className="text-3xl font-display font-bold mb-4 group-hover:text-brand-accent transition-colors">
               {project.title}
             </h3>
-            <p className="text-brand-text-muted leading-relaxed mb-8">
+            <p className="text-brand-text-muted leading-relaxed">
               {project.description}
             </p>
 
